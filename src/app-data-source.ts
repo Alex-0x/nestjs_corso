@@ -1,7 +1,6 @@
 import { User } from 'src/users/entities/user.entity';
 import { DataSource } from 'typeorm';
 import { Corsi } from './corsi/entities/corsi.entity';
-import { Docenti } from './docenti/entities/docenti.entity';
 
 let instance: DataSource | null = null;
 
@@ -17,7 +16,7 @@ const getInstance = () => {
       logging: false,
       synchronize: true,
       // entities: ["src/entities/*.js"],
-      entities: [Corsi, User, Docenti],
+      entities: [Corsi, User],
     });
   }
   return instance;
